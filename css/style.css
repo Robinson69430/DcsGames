@@ -5,8 +5,12 @@ body {
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
 }
 
 /* Style the buttons inside the tab */
@@ -20,6 +24,8 @@ body {
   transition: 0.3s;
   font-size: 17px;
 }
+
+
 
 /* Change background color of buttons on hover */
 .tab button:hover {
@@ -37,4 +43,29 @@ body {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+/* Conteneur des graphiques */
+.chart-container {
+    width: 80%;          /* largeur du graphique */
+    max-width: 800px;    /* largeur max */
+    height: 300px;       /* hauteur fixe */
+    margin: 20px auto;   /* centrage horizontal */
+}
+
+/* Force le canvas à respecter le conteneur */
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.img{
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.img img{
+  width: 15%;
+  margin-right: 20px;
 }
