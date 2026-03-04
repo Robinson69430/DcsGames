@@ -6,9 +6,9 @@ class DAO_Application{
     public function __construct() {
         try {
             $this->bdd = new PDO(
-                'mysql:host=localhost;dbname=dcsgames',
-                'root',
-                ''
+                'mysql:host=localhost;dbname=campus_it',
+                'campus_user',
+                'jojo'
             );
             $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch(Exception $e) {
