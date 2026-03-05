@@ -19,9 +19,9 @@ $ressou = $dao3->getRessource();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="../css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/chart.js"></script>
 </head>
 
 <body>
@@ -37,7 +37,7 @@ $ressou = $dao3->getRessource();
         </div>
     </div>
 
-    <!-- TAB 1 : Applications -->
+
     <div id="Tab1" class="tabcontent">
         <table class="table">
             <thead>
@@ -66,7 +66,7 @@ $ressou = $dao3->getRessource();
         </div>
     </div>
 
-    <!-- TAB 2 : Consommation -->
+
     <div id="Tab2" class="tabcontent">
         <table class="table">
             <thead>
@@ -95,7 +95,7 @@ $ressou = $dao3->getRessource();
         </div>
     </div>
 
-    <!-- TAB 3 : Ressource -->
+
     <div id="Tab3" class="tabcontent">
         <table class="table">
             <thead>
@@ -127,12 +127,12 @@ $ressou = $dao3->getRessource();
     </div>
 
     <script src="../js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    <script src="../js/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
 
     <script>
-        // Chart Applications
+
         const appLabels = <?= json_encode(array_column($applications, 'nom')) ?>;
         const appData = <?= json_encode(array_column($applications, 'total')) ?>;
 
@@ -153,7 +153,7 @@ $ressou = $dao3->getRessource();
             }
         });
 
-        // Chart Consommation
+
         const consoLabels = <?= json_encode(array_column($conso, 'mois')) ?>;
         const consoData = <?= json_encode(array_column($conso, 'total')) ?>;
 
@@ -171,7 +171,7 @@ $ressou = $dao3->getRessource();
             options: { responsive: true }
         });
 
-        // Chart Ressource
+
         const resLabels = <?= json_encode(array_column($ressou, 'mois')) ?>;
         const stockageData = <?= json_encode(array_column($ressou, 'Stockage')) ?>;
         const reseauData = <?= json_encode(array_column($ressou, 'Réseau')) ?>;
